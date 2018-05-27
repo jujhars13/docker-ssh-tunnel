@@ -13,12 +13,16 @@ Inspired by https://github.com/iadknet/docker-ssh-client-light
 
 ### required params
 ```bash
-# required variables
-LOCAL_PORT=3312 # port on your machine/k8s cluster
+## required variables
+# port on your machine/k8s cluster
+LOCAL_PORT=3312
 REMOTE_PORT=3306
-REMOTE_SERVER_IP="my.internal.mariadb.server" # OPTIONAL defaults to 127.0.0.1
-SSH_BASTION_HOST="bastion.host" # the bastion/host you're connecting to
-SSH_PORT=2297 # OPTIONAL defaults to 22
+# OPTIONAL defaults to 127.0.0.1
+REMOTE_SERVER_IP="my.internal.mariadb.server"
+# the bastion/host you're connecting to
+SSH_BASTION_HOST="bastion.host"
+# OPTIONAL defaults to 22
+SSH_PORT=2297
 SSH_USER="tunnel_user"
 
 # also be sure to inject/mount your private ssh key into the container to /ssh_key/id_rsa
