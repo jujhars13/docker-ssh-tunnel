@@ -1,11 +1,11 @@
 
 # Docker SSH Tunnel
 
-Used to create a lightweight SSH tunnel to a bastion host, then tunnel into db from there.  Uses plain jane SSH, no fluff
+Used to create a lightweight SSH tunnel to a bastion host, then proxy a db/service from there.  Uses pure SSH, no fluff
 
-For example I use it to create an SSH tunnel into a public facing bastion host, there it ssh's onto the internal LAN and connects me to MySQL all from Kubernetes.
+For example I use it to create an SSH tunnel into a public facing bastion host, there it SSHs onto the internal LAN and connects me to MySQL all from Kubernetes.
 
-Uses lightweight Alpine Linux.
+ Alpine Linux based.
 
 Inspired by https://github.com/iadknet/docker-ssh-client-light 
 
