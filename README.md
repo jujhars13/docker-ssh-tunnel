@@ -1,7 +1,9 @@
 
 # Docker SSH Tunnel
 
-[![](https://badge.imagelayers.io/jujhars13/docker-ssh-tunnel:latest.svg)](https://imagelayers.io/?images=jujhars13/docker-ssh-tunnel:latest 'Get your own badge on imagelayers.io')
+[![dockeri.co](http://dockeri.co/image/jujhars13/docker-ssh-tunnel)](https://hub.docker.com/r/jujhars13/docker-ssh-tunnel/)
+
+- [`latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
 Used to create a lightweight SSH tunnel to a bastion host, then proxy a db/service from there.  Uses pure SSH, no fluff
 
