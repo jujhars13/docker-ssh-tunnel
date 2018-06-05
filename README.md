@@ -29,9 +29,9 @@ SSH_BASTION_HOST="bastion.host"
 # OPTIONAL defaults to 22
 SSH_PORT=2297
 SSH_USER="tunnel_user"
-
-# also be sure to inject/mount your private ssh key into the container to /ssh_key/id_rsa
 ```
+
+Also be sure to inject/mount your private ssh key into the container to /ssh_key/id_rsa
 
 ### Example
 ```bash
