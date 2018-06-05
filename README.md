@@ -5,24 +5,27 @@
 
 - [`latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
-Used to create a lightweight SSH tunnel to a bastion host, then proxy a db/service from there.  Uses pure SSH, no fluff
+Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
-For example I use it to create an SSH tunnel into a public facing bastion host, there it SSHs onto the internal LAN and connects me to MySQL from a Kubernetes cluster.
-
-Alpine Linux based.
+For single port applications (database/webserver/debugging access) a SSH tunnel is faster and simpler than using a VPN.  See this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
+For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into an on prem bastion host, there it SSHs onto the internal LAN and connects me to the internal on prem MySQL server.
 
 Inspired by https://github.com/iadknet/docker-ssh-client-light and [GCP CloudSQL Proxy](https://cloud.google.com/sql/docs/mysql/sql-proxy)
 
-### required params
+### Required Parameters
 ```bash
-## required variables
-# port on your machine/k8s cluster
-LOCAL_PORT=3312
+# local port on your machine/k8s cluster
+LOCAL_PORT=3306
+
+# remote port from the machine your SSHing into
 REMOTE_PORT=3306
+
 # OPTIONAL defaults to 127.0.0.1
 REMOTE_SERVER_IP="my.internal.mariadb.server"
+
 # the bastion/host you're connecting to
 SSH_BASTION_HOST="bastion.host"
+
 # OPTIONAL defaults to 22
 SSH_PORT=2297
 SSH_USER="tunnel_user"
