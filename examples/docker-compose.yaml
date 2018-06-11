@@ -1,0 +1,27 @@
+version: '3.6'
+
+# example docker-compose which connects our local node container to the prod
+# database which sits in a traditional datacentre via an SSH tunnel
+services:
+  
+  node:
+    image: node:latest
+    volumes:
+      - ./app:/app
+    links:
+      - dbtunnel
+
+  dbtunnel:
+    image: jujhars13/docker-ssh-tunnel
+    restart: always
+    expose:
+      - "3306/tcp"
+    environment:
+      - LOCAL_PORT=3306
+      - REMOTE_PORT=3306
+      - REMOTE_SERVER_IP=10.10.36.74
+      - SSH_BASTION_HOST=24.342.228.122
+      - SSH_USER=dbtunnel
+      - SSH_PORT=22
+    volumes:
+      - ~/.ssh/example/dbtunnel:/ssh_key/id_rsa:ro
