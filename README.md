@@ -28,6 +28,7 @@ SSH_BASTION_HOST="bastion.host"
 
 # OPTIONAL defaults to 22
 SSH_PORT=2297
+
 SSH_USER="tunnel_user"
 ```
 
@@ -35,16 +36,21 @@ Also be sure to inject/mount your private ssh key into the container to /ssh_key
 
 ### Example
 ```bash
+# connect to our mongo server in AWS via a bastion host
+# now we can use a connection string like this:
+# mongodb://localhost:27017 
+# to talk to our AWS mongo install
 
-docker run -it --rm \
--e LOCAL_PORT=3306 \
--e REMOTE_PORT=3306 \
+docker run -it --rm -p 27017:27017 \
+-e LOCAL_PORT=27017 \
+-e REMOTE_PORT=27017 \
 -e SSH_BASTION_HOST=34.135.248.162 \
--e SSH_USER=jujhar \
--e SSH_PORT=2297 \
+-e REMOTE_SERVER_IP=aws-nlb-mongo-fake.internal-us-east-1.es.amazonaws.com \
+-e SSH_USER=ec2-user \
 -v ~/.ssh/id_rsa:/ssh_key/id_rsa:ro \
 jujhars13/docker-ssh-tunnel
 ```
 
 ## TODO
-- [ ] add example k8s manifest
+- [x] add example `docker-compose.yml`  to `/examples`
+- [ ] add example k8s manifest to `/examples`
