@@ -3,7 +3,8 @@
 
 [![dockeri.co](http://dockeri.co/image/jujhars13/docker-ssh-tunnel)](https://hub.docker.com/r/jujhars13/docker-ssh-tunnel/)
 
-- [`latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.0` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.0/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.1`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
