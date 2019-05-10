@@ -9,8 +9,9 @@
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
-For single port applications (database/webserver/debugging access) a SSH tunnel is faster and simpler than using a VPN.  See this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
-For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into an on prem bastion host, there it SSHs onto the internal LAN and connects me to the internal on prem MySQL server.
+For single port applications (database/webserver/debugging access) a SSH tunnel is far faster and simpler than using a VPN like OpenVPN; see this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
+
+For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into an on prem bastion host in order to talk to an on prem database; it SSHs onto the internal LAN and connects me to the internal on prem MySQL server.
 
 Inspired by https://github.com/iadknet/docker-ssh-client-light and [GCP CloudSQL Proxy](https://cloud.google.com/sql/docs/mysql/sql-proxy)
 
@@ -37,6 +38,7 @@ SSH_USER="tunnel_user"
 Also be sure to inject/mount your private ssh key into the container to /ssh_key/id_rsa
 
 ### Example
+
 ```bash
 # connect to our mongo server in AWS via a bastion host
 # now we can use a connection string like this:
@@ -54,5 +56,6 @@ jujhars13/docker-ssh-tunnel
 ```
 
 ## TODO
+
 - [x] add example `docker-compose.yml`  to `/examples`
 - [ ] add example k8s manifest to `/examples`
