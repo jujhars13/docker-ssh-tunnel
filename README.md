@@ -54,6 +54,9 @@ docker run -it --rm -p 27017:27017 \
 -e SSH_USER=ec2-user \
 -v ~/.ssh/id_rsa:/ssh_key/id_rsa:ro \
 jujhars13/docker-ssh-tunnel
+
+# connection established, now we can mongo away locally
+mongo --host localhost --port 27017
 ```
 
 ## TODO
