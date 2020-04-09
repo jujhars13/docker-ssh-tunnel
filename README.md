@@ -7,7 +7,8 @@
 - [`v1.2`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.2/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 - [`v1.3`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.3/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 - [`v1.3.1`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.3.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.4`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.4`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.5`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.5/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 

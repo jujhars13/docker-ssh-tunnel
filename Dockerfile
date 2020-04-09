@@ -1,4 +1,4 @@
-FROM alpine:3.10.2
+FROM alpine:3.11
 MAINTAINER Jujhar Singh <jujhar+docker@jujhar.com>
 
 RUN apk --no-cache add openssh-client bash
