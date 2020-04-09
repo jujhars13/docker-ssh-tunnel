@@ -1,6 +1,8 @@
 FROM alpine:3.11
 MAINTAINER Jujhar Singh <jujhar+docker@jujhar.com>
 
+LABEL org.label-schema.vcs-url="e.g. https://github.com/jujhars13/docker-ssh-tunnel"
+
 RUN apk --no-cache add openssh-client bash
 
 ADD run.sh /run.sh
