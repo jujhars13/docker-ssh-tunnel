@@ -25,7 +25,6 @@ fi
 echo "starting SSH proxy $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT on $SSH_USER@$SSH_BASTION_HOST:$SSH_PORT"
 
 /usr/bin/ssh \
--v \
 -NTC -o ServerAliveInterval=60 \
 -o GatewayPorts=true \
 -o ExitOnForwardFailure=yes \
