@@ -10,7 +10,7 @@
 - [`v1.4`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 - [`v1.5`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.5/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 - [`v1.6`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.6/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.7`,`v1,7,1`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.7`,`v1.7.2`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
@@ -20,7 +20,8 @@ For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into a
 
 Inspired by https://github.com/iadknet/docker-ssh-client-light and [GCP CloudSQL Proxy](https://cloud.google.com/sql/docs/mysql/sql-proxy)
 
-### Required Parameters
+## Required Parameters
+
 ```bash
 # local port on your machine/k8s cluster
 LOCAL_PORT=3306
@@ -42,7 +43,7 @@ SSH_USER="tunnel_user"
 
 Also be sure to inject/mount your private ssh key into the container to `/ssh_key/id_rsa`
 
-### Example
+## Example
 
 ```bash
 # connect to our mongo server in AWS via a bastion host
@@ -50,7 +51,8 @@ Also be sure to inject/mount your private ssh key into the container to `/ssh_ke
 # mongodb://localhost:27017 
 # to talk to our AWS mongo install
 
-docker run -it --rm -p 27017:27017 \
+docker run -it --rm \
+-p 27017:27017 \
 -e LOCAL_PORT=27017 \
 -e REMOTE_PORT=27017 \
 -e SSH_BASTION_HOST=34.135.248.162 \
