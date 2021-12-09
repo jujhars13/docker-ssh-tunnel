@@ -14,7 +14,9 @@ Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no
 - [`v1.4`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 - [`v1.5`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.5/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 - [`v1.6`, (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.6/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.7`,`v1.7.2`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.7`,`v1.7.2`,(*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+(http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.8`,`latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.8/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
 For single TCP port applications (database/webserver/debugging access) a SSH tunnel is far faster and simpler than using a VPN like OpenVPN; see this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
 
@@ -71,3 +73,7 @@ mongo --host localhost --port 27017
 
 - [x] add example `docker-compose.yml`  to `/examples`
 - [ ] add example k8s manifest to `/examples`
+
+## Version
+
+- 2021-09-12 - v1.8 - Bumps Alpine to v3.15

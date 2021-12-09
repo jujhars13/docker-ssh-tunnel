@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.15
 MAINTAINER Jujhar Singh <jujhar+docker@jujhar.com>
 
 LABEL org.label-schema.vcs-url="e.g. https://github.com/jujhars13/docker-ssh-tunnel"
