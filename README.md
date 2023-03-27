@@ -32,3 +32,7 @@ Docker Hub: `docker pull kalithekitsune/docker-reversed-ssh-tunnel`
 ## Example
 
 please refer to the [examples/docker-compose.yml](/examples/docker-compose.yaml) file for an example.
+
+## Recommandations
+
+if you want to use an open-ssh docker container, you can use [this linux-server.io image mod](https://github.com/linuxserver/docker-mods/tree/openssh-server-ssh-tunnel)
