@@ -8,7 +8,7 @@ For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into a
 
 Inspired by https://github.com/iadknet/docker-ssh-client-light and [GCP CloudSQL Proxy](https://cloud.google.com/sql/docs/mysql/sql-proxy)
 
-**FORKED FROM jujhars13/docker-ssh-tunnel/** but reversed the tunnel direction.
+**FORKED FROM jujhars13/docker-ssh-tunnel/** but reversed the tunnel direction. (more details about tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/))
 
 ## Required Parameters
 
