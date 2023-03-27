@@ -1,4 +1,4 @@
-# Docker SSH Tunnel
+# Docker Reversed SSH Tunnel
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
@@ -23,6 +23,11 @@ Inspired by https://github.com/iadknet/docker-ssh-client-light and [GCP CloudSQL
 
 
 Note: Remember to inject/mount your private SSH key into the container to `/ssh_key/id_rsa`.
+
+## Repos
+
+gcr.io: `docker pull gcr.io/kalitsune/docker-reversed-ssh-tunnel`
+Docker Hub: `docker pull kalithekitsune/docker-reversed-ssh-tunnel`
 
 ## Example
 
