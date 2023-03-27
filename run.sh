@@ -14,7 +14,7 @@ if [ -z ${REMOTE_IP+x} ] ; then
     exit 1
 fi
 
-echo "starting SSH Reverse proxy $CONTAINER_IP:$CONTAINER_PORT -> $REMOTE_IP:$REMOTE_PORT as $SSH_USER@$SSH_BASTION_HOST:$SSH_PORT"
+echo "starting SSH Reverse proxy $CONTAINER_IP:$CONTAINER_PORT -> $REMOTE_IP:$REMOTE_PORT as $SSH_USER@$REMOTE_IP:$SSH_PORT"
 
 /usr/bin/ssh \
 -NTC -o ServerAliveInterval=60 \
