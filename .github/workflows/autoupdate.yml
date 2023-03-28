@@ -1,6 +1,8 @@
 name: CI for releases
 
-on: push
+on:
+  schedule:
+    - cron: '0 0 * * 0' # every Sunday at midnight
 
 jobs:
   build-and-push-docker-image:
@@ -34,6 +36,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Get latest tag
+        id: latest_tag
+        run: echo ::set-output name=tag::$(git describe --tags $(git rev-list --tags --max-count=1))
+      -
         name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v4
@@ -42,13 +48,8 @@ jobs:
             ghcr.io/${{ github.REPOSITORY_OWNER }}/${{ env.IMAGE_NAME }}
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
-            type=semver,pattern={{version}}
+            ${{ steps.latest_tag.outputs.tag }}
             latest
-          labels: |
-            org.opencontainers.image.source=https://github.com/${{ github.repository }}
-            org.opencontainers.image.documentation=https://github.com/${{ github.repository }}/blob/${{ github.sha }}/README.md
-
       -
         name: Build and push
         uses: docker/build-push-action@v3

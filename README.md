@@ -6,6 +6,16 @@ Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no
 
 FORKED FROM jujhars13/docker-ssh-tunnel but reversed the tunnel direction. 
 
+## Advantages
+
+ - Stay up to date (with weekly builds that ensure that OpenSSH is up to date)
+
+ - Lightweight
+
+ - Easy to use
+
+ - No need to install anything on the host or the client
+
 ## Required Parameters
 
 | Variable           | Description                                                   | default    |
