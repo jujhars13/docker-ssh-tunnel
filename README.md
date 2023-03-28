@@ -2,24 +2,21 @@
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
-For single TCP port applications (database/webserver/debugging access) a SSH tunnel is far faster and simpler than using a VPN like OpenVPN; see this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
+**Learn more about ssh tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/))**
 
-For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into an on prem bastion host in order to talk to an on prem MySQL database; it SSHs onto the internal LAN and connects me to the internal on prem MySQL server.
-
-Inspired by https://github.com/iadknet/docker-ssh-client-light and [GCP CloudSQL Proxy](https://cloud.google.com/sql/docs/mysql/sql-proxy)
-
-**FORKED FROM jujhars13/docker-ssh-tunnel/** but reversed the tunnel direction. (more details about tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/))
+FORKED FROM jujhars13/docker-ssh-tunnel but reversed the tunnel direction. 
 
 ## Required Parameters
 
-| Variable           | Description                                                       | Required |
-| ------------------ | ----------------------------------------------------------------- | -------- |
-| `SSH_PORT`         | Port number for SSH (defaults to 22)                              | No       |
-| `SSH_USER`         | Username for the SSH connection (default: root)                   | No       |
-| `CONTAINER_IP`     | IP address of the container (default: 127.0.0.1)                  | No       |
-| `CONTAINER_PORT`   | The port you want to expose on the container (default: 80)        | No       |
-| `REMOTE_IP`        | IP/Domain of the machine that will expose your app (the host)     | Yes      |
-| `REMOTE_PORT`      | Remote port that will be exposed on the host (default: 80)        | No       |
+| Variable           | Description                                                   | default    |
+| ------------------ | ------------------------------------------------------------- | ---------- |
+| `SSH_PORT`         | Port number for SSH                                           | 22         |
+| `SSH_USER`         | Username for the SSH connection                               | root       |
+| `CONTAINER_IP`     | IP address of the container                                   | 127.0.0.1  |
+| `CONTAINER_PORT`   | The port you want to expose on the container                  | 80         |
+| `GATEWAY_IP`       | IP/Domain of the machine that will expose your app (the host) | (required) |
+| `REMOTE_PORT`      | Which port should sshd listen from on the gateway             | 80         |
+| `REMOTE_IP`        | Which IP should sshd listen from on the gateway (`*` for all) | *          |
 
 
 Note: Remember to inject/mount your private SSH key into the container to `/ssh_key/id_rsa`.
