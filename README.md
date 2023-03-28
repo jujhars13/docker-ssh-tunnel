@@ -2,11 +2,11 @@
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
-**Learn more about ssh tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/))**
+**Learn more about ssh tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/)**
 
 FORKED FROM jujhars13/docker-ssh-tunnel but reversed the tunnel direction. 
 
-## Advantages
+## Perks
 
  - Stay up to date (with weekly builds that ensure that OpenSSH is up to date)
 
