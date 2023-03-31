@@ -2,7 +2,9 @@
 
 Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
 
-**Learn more about ssh tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/)**
+<img src="./reversed-ssh-schema.png" alt="Schema for how Reversed SSH tunnels work" width="70%"/>
+
+**Image source & learn more about ssh tunneling [here](https://iximiuz.com/en/posts/ssh-tunnels/)**
 
 FORKED FROM jujhars13/docker-ssh-tunnel but reversed the tunnel direction. 
 
