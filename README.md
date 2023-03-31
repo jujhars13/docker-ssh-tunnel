@@ -35,8 +35,8 @@ Note: Remember to inject/mount your private SSH key into the container to `/ssh_
 
 ## Repos
 
-gcr.io: `docker pull gcr.io/kalitsune/docker-reversed-ssh-tunnel`
-Docker Hub: `docker pull kalithekitsune/docker-reversed-ssh-tunnel`
+- gcr.io: `docker pull gcr.io/kalitsune/docker-reversed-ssh-tunnel`
+- Docker Hub: `docker pull kalithekitsune/docker-reversed-ssh-tunnel`
 
 ## Example
 
@@ -44,4 +44,4 @@ please refer to the [examples/docker-compose.yml](/examples/docker-compose.yaml)
 
 ## Recommandations
 
-if you want to use an open-ssh docker container, you can use [this linux-server.io image mod](https://github.com/linuxserver/docker-mods/tree/openssh-server-ssh-tunnel)
+if you want to use an open-ssh docker container as the gatewway, you can use this [linux-server.io image mod](https://github.com/linuxserver/docker-mods/tree/openssh-server-ssh-tunnel)
