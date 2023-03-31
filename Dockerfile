@@ -1,4 +1,4 @@
-FROM alpine:3.16
+FROM alpine:latest
 MAINTAINER Kalitsune <fanny@kalitsune.cloud>
 
 LABEL maintainer="Kalitsune fanny@kalitsune.cloud" \
@@ -8,6 +8,7 @@ RUN apk --no-cache add openssh-client
 
 ADD run.sh /run.sh
 
+# Supported vars and their default values
 ENV SSH_PORT=22
 ENV SSH_USER=root
 ENV CONTAINER_IP=127.0.0.1
