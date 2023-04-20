@@ -24,8 +24,8 @@ FORKED FROM jujhars13/docker-ssh-tunnel but reversed the tunnel direction.
 | ------------------ | ------------------------------------------------------------- | ---------- |
 | `SSH_PORT`         | Port number for SSH                                           | 22         |
 | `SSH_USER`         | Username for the SSH connection                               | root       |
-| `CONTAINER_IP`     | IP address of the container                                   | 127.0.0.1  |
-| `CONTAINER_PORT`   | The port you want to expose on the container                  | 80         |
+| `LOCAL_IP`         | IP address of the target you want to expose                   | 127.0.0.1  |
+| `LOCAL_PORT`       | The port you want to expose on the target                     | 80         |
 | `GATEWAY_IP`       | IP/Domain of the machine that will expose your app (the host) | (required) |
 | `REMOTE_PORT`      | Which port should sshd listen from on the gateway             | 80         |
 | `REMOTE_IP`        | Which IP should sshd listen from on the gateway (`*` for all) | *          |
