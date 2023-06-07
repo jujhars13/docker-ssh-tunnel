@@ -24,5 +24,6 @@ services:
       - SSH_BASTION_HOST=24.342.228.122
       - SSH_USER=dbtunnel
       - SSH_PORT=22
+      - SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock
     volumes:
-      - ~/.ssh/example/dbtunnel:/ssh_key/id_rsa:ro
+      - /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock

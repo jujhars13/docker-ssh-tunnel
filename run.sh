@@ -24,6 +24,10 @@ fi
 
 echo "starting SSH proxy $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT on $SSH_USER@$SSH_BASTION_HOST:$SSH_PORT"
 
+if [ -z ${SSH_AUTH_SOCK+x} ] ; then
+    SSH_IDENTITY=" -i /ssh_key/id_rsa"
+fi
+
 /usr/bin/ssh \
 -NTC -o ServerAliveInterval=60 \
 -o GatewayPorts=true \
@@ -32,4 +36,4 @@ echo "starting SSH proxy $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT on $SSH_USER
 -L $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT \
 $SSH_USER@$SSH_BASTION_HOST \
 -p $SSH_PORT \
--i /ssh_key/id_rsa
+${SSH_IDENTITY:-}
