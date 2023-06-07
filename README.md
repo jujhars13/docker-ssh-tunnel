@@ -68,6 +68,12 @@ jujhars13/docker-ssh-tunnel
 mongo --host localhost --port 27017
 ```
 
+## Forwarding ssh-agent socket
+
+Mounting your private ssh key doesn't work if it's protected by a passphrase. Instead you can forward your ssh-agent via SSH_AUTH_SOCK, by mounting the special (seemingly non-existent) socket /run/host-services/ssh-auth.sock within the container, and setting the environment variable appropriately.
+
+See [the docker-compose example](./examples/docker-compose-agent.yaml) for more.
+
 ## TODO
 
 - [x] add example `docker-compose.yml`  to `/examples`
