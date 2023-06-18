@@ -2,7 +2,7 @@ name: CI for releases
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # every Sunday at midnight
+    - cron: '0 0 1 * *' # first day of the month
 
 jobs:
   build-and-push-docker-image:
