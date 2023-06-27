@@ -72,7 +72,18 @@ mongo --host localhost --port 27017
 
 Mounting your private ssh key doesn't work if it's protected by a passphrase. Instead you can forward your ssh-agent via SSH_AUTH_SOCK, by mounting the special (seemingly non-existent) socket /run/host-services/ssh-auth.sock within the container, and setting the environment variable appropriately.
 
-See [the docker-compose example](./examples/docker-compose-agent.yaml) for more.
+Use the following options with the `docker run` command above to enable this:
+
+```
+-e SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock \
+-v /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock \
+```
+
+You can omit the following option:
+```
+-v ~/.ssh/id_rsa:/ssh_key/id_rsa:ro \
+```
+
 
 ## TODO
 

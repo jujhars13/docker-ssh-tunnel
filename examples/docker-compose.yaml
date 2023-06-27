@@ -12,8 +12,7 @@ services:
       - dbtunnel
 
   dbtunnel:
-    build:
-      context: ../
+    image: jujhars13/docker-ssh-tunnel
     restart: always
     expose:
       - "3306/tcp"
