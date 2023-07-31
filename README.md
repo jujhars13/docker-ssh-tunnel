@@ -76,7 +76,7 @@ Use the following options with the `docker run` command above to enable this:
 
 ```
 -e SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock \
--v /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock \
+-v ${SSH_AUTH_SOCK}:/run/host-services/ssh-auth.sock \
 ```
 
 You can omit the following option:
