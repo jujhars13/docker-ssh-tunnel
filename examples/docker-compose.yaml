@@ -8,7 +8,7 @@ services:
       - nginx-hello
       - openssh-server
     volumes:
-      - ./ssh/id_rsa:/ssh_key/id_rsa:ro \
+      - ./ssh/ed_key:/ssh_key/ed_key:ro \
     environment:
       - SSH_PORT=2222
       - SSH_USER=proxy
@@ -29,11 +29,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - PUBLIC_KEY_FILE=/tmp/id_rsa.pub
+      - PUBLIC_KEY_FILE=/tmp/ed_key.pub
       - USER_NAME=proxy
       - DOCKER_MODS=linuxserver/mods:openssh-server-ssh-tunnel # important if you're using linuxserver/openssh as a reverse proxy
     volumes:
-      - ./ssh/id_rsa.pub:/tmp/id_rsa.pub:ro \
+      - ./ssh/ed_key.pub:/tmp/ed_key.pub:ro \
     ports:
       - 8080:8080
     restart: unless-stopped

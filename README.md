@@ -31,7 +31,7 @@ FORKED FROM jujhars13/docker-ssh-tunnel but reversed the tunnel direction.
 | `REMOTE_IP`        | Which IP should sshd listen from on the gateway (`*` for all) | *          |
 
 
-Note: Remember to inject/mount your private SSH key into the container to `/ssh_key/id_rsa`.
+Note: Remember to inject/mount your private SSH key into the container to `/ssh_key/ed_key`.
 
 ## Repos
 
