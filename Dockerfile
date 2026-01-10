@@ -1,4 +1,4 @@
-FROM alpine:3.21.3
+FROM alpine:3.23.2
 MAINTAINER Jujhar Singh <jujhar+docker@jujhar.com>
 
 LABEL maintainer="Jujhar Singh jujhar+docker@jujhar.com" \
